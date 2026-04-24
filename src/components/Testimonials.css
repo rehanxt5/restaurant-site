@@ -1,0 +1,115 @@
+.testimonials {
+  background-color: var(--color-bg-secondary);
+}
+
+.testimonials__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.testimonials__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.testimonials__title {
+  margin-bottom: 0;
+}
+
+.testimonials__title-italic {
+  font-style: italic;
+  color: var(--color-accent-gold);
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.testimonials__card {
+  position: relative;
+  background-color: var(--color-bg-card);
+  padding: 32px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition-base);
+}
+
+.testimonials__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
+
+.testimonials__card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--color-accent-gold);
+  border-radius: var(--radius-card) 0 0 var(--radius-card);
+}
+
+.testimonials__stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.testimonials__star {
+  font-size: 14px;
+  color: var(--color-border);
+}
+
+.testimonials__star--filled {
+  color: var(--color-accent-gold);
+}
+
+.testimonials__quote {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-text-primary);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.testimonials__author {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.testimonials__author-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.testimonials__author-date {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+  .testimonials__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .testimonials__card {
+    padding: 24px;
+  }
+
+  .testimonials__quote {
+    font-size: 15px;
+  }
+}

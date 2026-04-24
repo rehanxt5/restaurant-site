@@ -1,0 +1,126 @@
+.signature {
+  background-color: var(--color-bg-secondary);
+  overflow: hidden;
+}
+
+.signature__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.signature__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.signature__title {
+  margin-bottom: 0;
+}
+
+.signature__title-italic {
+  font-style: italic;
+  color: var(--color-accent-gold);
+}
+
+.signature__wrapper {
+  margin: 0 -24px;
+  padding: 0 24px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.signature__wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.signature__scroll {
+  display: flex;
+  gap: 32px;
+  padding-bottom: 16px;
+}
+
+.signature__card {
+  flex: 0 0 380px;
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  transition: var(--transition-base);
+}
+
+.signature__card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-elevated);
+}
+
+.signature__card-image-wrapper {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.signature__card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease-out;
+}
+
+.signature__card:hover .signature__card-image {
+  transform: scale(1.05);
+}
+
+.signature__card-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 8px 16px;
+  background-color: var(--color-accent-gold);
+  border-radius: 4px;
+}
+
+.signature__card-badge-text {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.signature__card-content {
+  padding: 28px;
+}
+
+.signature__card-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+}
+
+.signature__card-description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+}
+
+.signature__card-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-accent-gold);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .signature__card {
+    flex: 0 0 300px;
+  }
+
+  .signature__scroll {
+    gap: 20px;
+  }
+}
